@@ -1,0 +1,47 @@
+<div class="row">
+    <div class="col-sm-12">
+      <app-card cardTitle="Lista de departamentos" blockClass="pc-component">
+        <div class="col-md-12 col-xl-8">
+          <h5 class="mb-3">
+            <a href="nuevodepartamento" class="btn btn-outline-dark">Nuevo Cliente</a>
+          </h5>
+          <div class="card tbl-card">
+            <div class="table-responsive">
+              <table class="table table-hover mb-0">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Nombre</th>
+                    <th>ubicacion</th>
+                    <th class="text-end">Correo</th>
+                    <th>extension</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  @for (cliente of listaclientes; track $index) {
+                    <tr>
+                      <td>{{ $index + 1 }}</td>
+                      <td>{{ cliente.nombre }}</td>
+                      <td>{{ cliente.ubicacion }}</td>
+                      <td>{{ cliente.jefe_departamento }}</td>
+                      <td>{{ cliente.extension }}</td>
+                      <td>
+                        <button type="button" class="btn btn-outline-success" [routerLink]="['/editardepartamento/', departamentos.departamento_id]">
+                          Editar
+                        </button>
+                        <button (click)="eliminar(departamentos.departamento_id)" type="button" class="btn btn-outline-danger">Eliminar</button>
+                      </td>
+                    </tr>
+                  }
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </app-card>
+    </div>
+  </div>
+  <!--
+    LOS COMPONENTES (.TS) ESTAN OBLIGADOS A IMPORTAR LA REFERENCIA PARA QUE SE PUEDA USAR EN EL HTML
+    -->
