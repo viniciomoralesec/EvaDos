@@ -3,7 +3,7 @@
       <app-card cardTitle="Lista de departamentos" blockClass="pc-component">
         <div class="col-md-12 col-xl-8">
           <h5 class="mb-3">
-            <a href="nuevodepartamento" class="btn btn-outline-dark">Nuevo Cliente</a>
+            <a href="nuevodepartamento" class="btn btn-outline-dark">Nuevo departamento</a>
           </h5>
           <div class="card tbl-card">
             <div class="table-responsive">
@@ -19,13 +19,13 @@
                   </tr>
                 </thead>
                 <tbody>
-                  @for (cliente of listaclientes; track $index) {
+                  @for (departamento of listadepartamentos; track $index) {
                     <tr>
                       <td>{{ $index + 1 }}</td>
-                      <td>{{ cliente.nombre }}</td>
-                      <td>{{ cliente.ubicacion }}</td>
-                      <td>{{ cliente.jefe_departamento }}</td>
-                      <td>{{ cliente.extension }}</td>
+                      <td>{{ departamento.nombre }}</td>
+                      <td>{{ departamento.ubicacion }}</td>
+                      <td>{{ departamento.jefe_departamento }}</td>
+                      <td>{{ departamento.extension }}</td>
                       <td>
                         <button type="button" class="btn btn-outline-success" [routerLink]="['/editardepartamento/', departamentos.departamento_id]">
                           Editar

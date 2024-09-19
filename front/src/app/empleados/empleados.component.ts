@@ -12,15 +12,15 @@ import Swal from 'sweetalert2';
   styleUrl: './empleados.component.scss'
 })
 export class EmpleadosComponent {
-  listaclientes: IEmpleado[] = [];
-  constructor(private clienteServicio: EmpleadosService) {}
+  listaempleados: IEmpleado[] = [];
+  constructor(private empleadoServicio: EmpleadosService) {}
 
   ngOnInit() {
     this.cargatabla();
   }
   cargatabla() {
-    this.clienteServicio.todos().subscribe((data) => {
-      this.listaclientes = data;
+    this.empleadoServicio.todos().subscribe((data) => {
+      this.listaempleados = data;
     });
   }
 
@@ -32,10 +32,10 @@ export class EmpleadosComponent {
       showCancelButton: true,
       confirmButtonColor: '#d33',
       cancelButtonColor: '#3085d6',
-      confirmButtonText: 'Emliminar empleado'
+      confirmButtonText: 'Eliminar empleado'
     }).then((result) => {
       if (result.isConfirmed) {
-        this.clienteServicio.eliminar(id).subscribe(data => {
+        this.empleadoServicio.eliminar(id).subscribe(data => {
           if(data) {
             Swal.fire('empleados', 'El empleado ha sido eliminado.', 'success');
             this.cargatabla();

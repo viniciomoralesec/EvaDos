@@ -8,10 +8,10 @@ import Swal from 'sweetalert2';
   selector: 'app-empleados',
   standalone: true,
   imports: [RouterLink, SharedModule],
-  templateUrl: './empleados.component.html',
-  styleUrl: './empleados.component.scss'
+  templateUrl: '../nuevoempleado.component.html',
+  styleUrl: '../nuevoempleado.component.scss'
 })
-export class EmpleadosComponent {
+export class NuevoEmpleadosComponent {
   listaempleados: IEmpleado[] = [];
   constructor(private empleadoServicio: EmpleadosService) {}
 
@@ -37,7 +37,7 @@ export class EmpleadosComponent {
       if (result.isConfirmed) {
         this.empleadoServicio.eliminar(empleado_id).subscribe(data => {
           if(data) {
-            Swal.fire('empleados', 'El empelado ha sido eliminado.', 'success');
+            Swal.fire('empleados', 'El empleado ha sido eliminado.', 'success');
             this.cargatabla();
           } else {
             Swal.fire('empleados', 'El empleado no se pudo eliminar, porque se han creado ordenes a su nombre.', 'info');

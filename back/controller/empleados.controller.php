@@ -9,7 +9,7 @@ if ($method == "OPTIONS") {
 }
 //TODO: controlador de Empleados
 
-require_once('../models/Empleados.model.php');
+require_once('../model/Empleados.model.php');
 
 $Empleados = new Empleados;
 

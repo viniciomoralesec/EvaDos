@@ -1,6 +1,6 @@
 <?php
 //TODO: Clase de Empleados
-require_once('../config/config.php');
+require_once('../config.php');
 class Empleados
 {
     //TODO: Implementar los metodos de la clase

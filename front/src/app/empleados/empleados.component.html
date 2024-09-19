@@ -27,7 +27,7 @@
                       <td>{{ empleado.email }}</td>
                       <td>{{ empleado.telefono }}</td>
                       <td>
-                        <button type="button" class="btn btn-outline-success" [routerLink]="['/editarcliente/', empleado.empleado_id]">
+                        <button type="button" class="btn btn-outline-success" [routerLink]="['/editarempleado/', empleado.empleado_id]">
                           Editar
                         </button>
                         <button (click)="eliminar(empleado.empleado_id)" type="button" class="btn btn-outline-danger">Eliminar</button>

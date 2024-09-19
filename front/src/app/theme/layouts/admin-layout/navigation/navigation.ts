@@ -36,6 +36,7 @@ export const NavigationItems: NavigationItem[] = [
       }
     ]
   },
+/*
   {
     id: 'authentication',
     title: 'Authentication',
@@ -64,6 +65,7 @@ export const NavigationItems: NavigationItem[] = [
       }
     ]
   },
+  
   {
     id: 'utilities',
     title: 'UI Components',
@@ -98,7 +100,24 @@ export const NavigationItems: NavigationItem[] = [
       }
     ]
   },
-
+*/
+  {
+    id: 'Componentes',
+    title: 'Componentes',
+    type: 'group',
+    icon: 'icon-navigation',
+    children: [
+      {
+        id: 'Empleados',
+        title: 'Empleados',
+        type: 'item',
+        classes: 'nav-item',
+        url: '/Empleados',
+        icon: ''
+      }
+    ]
+  },
+  
   {
     id: 'other',
     title: 'Other',

@@ -10,7 +10,7 @@ if ($method == "OPTIONS") {
 
 //TODO: controlador de departamentos
 
-require_once('../models/departamentos.model.php');
+require_once('../model/departamentos.model.php');
 
 $departamentos = new departamentos;
 

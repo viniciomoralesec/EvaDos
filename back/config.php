@@ -5,8 +5,8 @@ class ClaseConectar
     protected $db;
     private $host = "localhost";
     private $usuario = "root";
-    private $pass = "";
-    private $base = "restaurante";
+    private $pass = "root";
+    private $base = "sexto";
     public function ProcedimientoParaConectar() {
         $this->conexion = mysqli_connect($this->host, $this->usuario, $this->pass, $this->base);
         mysqli_query($this->conexion, "SET NAMES 'utf8'");

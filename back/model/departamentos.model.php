@@ -1,6 +1,6 @@
 <?php
 //TODO: Clase de Departamentos
-require_once('../config/config.php');
+require_once('../config.php');
 class Departamentos
 {
     //TODO: Implementar los metodos de la clase
